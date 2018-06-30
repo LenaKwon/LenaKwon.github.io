@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hello wolrd
+title: python-checkio
 ---
 ###TIL 
 유투브 김왼손의 왼손코딩의 게임으로 배우는 파이썬 프로그래밍을 보며 checkio 방식을 익혔다.
