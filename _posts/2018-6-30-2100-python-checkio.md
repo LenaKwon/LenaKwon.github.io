@@ -2,7 +2,7 @@
 layout: post
 title: hello wolrd
 ---
-###*TIL 
+###TIL 
 유투브 김왼손의 왼손코딩의 게임으로 배우는 파이썬 프로그래밍을 보며 checkio 방식을 익혔다.
 https://www.youtube.com/watch?v=YEkLIhVvy_Q
 문법은 손으로 익히는 편이 빠를테니 일단 문제로 부딪혀 보자. 
