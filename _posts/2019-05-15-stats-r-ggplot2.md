@@ -30,29 +30,29 @@ ggplot2
 
 
 ### BASICS
-__ggplot()__  :define the data using basic funtion to plot, `create empty plot object`.  
-__geoms___    :`represent data` and add `plot type` after it, e.g) geom_point(), geom_line()  
+1. __ggplot()__  :define the data using basic funtion to plot, `create empty plot object`.  
+2. __geoms___    :`represent data` and add `plot type` after it, e.g) geom_point(), geom_line()  
               
-   >list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
+   > * list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
                
-   >*color,  
-   >*size : size of the shape for points,  
-          height for text,  
-          width for lines (units of millimetres)  
-   >*group aesthetics  
+   > * color,  
+   > * size : size of the shape for points,  
+              height for text,  
+              width for lines (units of millimetres)  
+   > * group aesthetics  
              
             
-__aes()__     :aesthetics of the data values (x-, y- location of data)
+3. __aes()__     :aesthetics of the data values (x-, y- location of data)  
            
-           *aes() function can be included as an argument to ggplot()
-                  inclusion of aes() in ggplot() is useful when there are multiple geoms
-           e.g.
-           ggplot(Orange) + geom_line(aes(age, circumference, colour = Tree)) +
-           geom_point(aes(age, circumference, colour = Tree))
-           -->>>>
-           ggplot(Orange, aes(age, circumference, colour=Tree)) + geom_line() + geom_point()
+      > *aes() function can be included as an argument to ggplot()  
+      >       inclusion of aes() in ggplot() is useful when there are multiple geoms  
+      >    e.g.  
+      >     ggplot(Orange) + geom_line(aes(age, circumference, colour = Tree)) +  
+      >    geom_point(aes(age, circumference, colour = Tree))  
+      >   -->>>>  
+      >  ggplot(Orange, aes(age, circumference, colour=Tree)) + geom_line() + geom_point()  
            
-           *when an aes is added to a geom, that overrides the aes defined in the ggplot() 
+      > *when an aes is added to a geom, that overrides the aes defined in the ggplot() 
 
 __scales__    :to change axix components
            
