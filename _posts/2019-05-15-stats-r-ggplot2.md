@@ -33,13 +33,13 @@ ggplot2
 __ggplot()__  :define the data using basic funtion to plot, `create empty plot object`.  
 __geoms___    :`represent data` and add `plot type` after it, e.g) geom_point(), geom_line()  
               
-           list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
+   >list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
                
-               *color,
-               *size : size of the shape for points,
-                     height for text,
-                     width for lines (units of millimetres)
-               *group aesthetics
+   >*color,
+   >*size : size of the shape for points,
+          height for text,
+          width for lines (units of millimetres)
+   >*group aesthetics
             
             
 __aes()__     :aesthetics of the data values (x-, y- location of data)
