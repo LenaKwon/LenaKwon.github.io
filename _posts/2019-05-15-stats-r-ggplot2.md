@@ -44,36 +44,35 @@ ggplot2
             
 3. __aes()__     :aesthetics of the data values (x-, y- location of data)  
            
-      > *aes() function can be included as an argument to ggplot()  
+      > * aes() function can be included as an argument to ggplot()  
       >       inclusion of aes() in ggplot() is useful when there are multiple geoms  
-      >    e.g.  
-      >     ggplot(Orange) + geom_line(aes(age, circumference, colour = Tree)) +  
-      >    geom_point(aes(age, circumference, colour = Tree))  
-      >   -->>>>  
-      >  ggplot(Orange, aes(age, circumference, colour=Tree)) + geom_line() + geom_point()  
-           
-      > *when an aes is added to a geom, that overrides the aes defined in the ggplot() 
+      >     e.g.  
+      >      ggplot(Orange) + geom_line(aes(age, circumference, colour = Tree)) +   
+      >      geom_point(aes(age, circumference, colour = Tree))  
+      >       -->>>>  
+      >      ggplot(Orange, aes(age, circumference, colour=Tree)) + geom_line() + geom_point()         
+      > * when an aes is added to a geom, that overrides the aes defined in the ggplot() 
 
 __scales__    :to change axix components
            
-           *discrete, continuous,date, date time, log, reverse scales
+   * discrete, continuous,date, date time, log, reverse scales
            
-           *continuous(arguments:limits,labels,breaks,na.value)
+       * continuous(arguments:limits,labels,breaks,na.value)
                       breakes affect the background grid lines, since these lines are linked to tick marks.
                       e.g.  +scale_y_continous(name = "Number of Students")
       
-           legend : -automatically created and determinded by the scale
-                    -name: control legend title
-                    -labels: control legend item labels
-                    -legend.position
-                    -legend.justification
+           * legend : - automatically created and determinded by the scale
+                      - name: control legend title
+                      - labels: control legend item labels
+                      - legend.position
+                      - legend.justification
                     
 __stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
             
-            one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
-            stat_bin produces three new variables `count`, `density` and `x`(the centre of the bins)
+   * one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
+           * stat_bin produces three new variables `count`, `density` and `x`(the centre of the bins)
             
-            *Note that the ordinary histogram command also produces these values but invisibly.
+       * Note that the ordinary histogram command also produces these values but invisibly.
             These new values can be used, but may need to be `surrounded with ..` to ensure the correct variable is chosen.
             e.g.
             ggplot(course.df) + 
@@ -84,7 +83,7 @@ __stats__     : a stat takes a dataset and produces a new dataset so can add new
 
 __group__     : 
             
-            *ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
+   * ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
             stat_smooth(aes(group = Gender, color = Gender), method ="lm")
             
 
@@ -123,6 +122,7 @@ library(ggplot2)
 
 
 ----------
+
 
 str(Orange)  
 
