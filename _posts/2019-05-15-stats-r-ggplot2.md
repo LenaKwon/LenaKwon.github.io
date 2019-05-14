@@ -24,12 +24,12 @@ ggplot2
 
 
 ### Resourse
->Hadley Wickham, ggplot2: Elegant Graphics for Data Analysis, Springer, 2009
->Paul Murrell, R Graphic, Second Edition, CRC Press, 2011
->R Cookbook, Graphs by Winston Chang: http://www.cookbook-r.com/Graphs/
+* Hadley Wickham, ggplot2: Elegant Graphics for Data Analysis, Springer, 2009
+* Paul Murrell, R Graphic, Second Edition, CRC Press, 2011
+* R Cookbook, Graphs by Winston Chang: http://www.cookbook-r.com/Graphs/
 
 ### BASICS
-__ggplot()__  :define the data using basic funtion to plot, create `empty plot object`.
+__ggplot()__  :define the data using basic funtion to plot, create `empty plot object`.  
 __geoms___    :represent data and add `plot type` after it, e.g) geom_point(), geom_line()  
               
                list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
@@ -86,89 +86,105 @@ __group__     :
 
 ### using dataset
 ----------
-#Fisher's Iris Data  
-str(iris)  
-'data.frame': 150 obs. of  5 variables:  
-$ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...  
-$ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...  
-$ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...  
-$ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...  
-$ Species     : Factor w/ 3 levels "setosa","versicolor",..:  
+__Fisher's Iris Data__    
+
+str(iris) 
+
+    'data.frame': 150 obs. of  5 variables:  
+    $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...  
+    $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...  
+    $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...  
+    $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...  
+    $ Species     : Factor w/ 3 levels "setosa","versicolor",..:  
 
 head(iris)  
-Sepal.Length Sepal.Width Petal.Length Petal.Width     Species  
-    1          5.1         3.5          1.4     0.2   setosa  
-    2          4.9         3.0          1.4     0.2   setosa  
-    3          4.7         3.2          1.3     0.2   setosa  
-    4          4.6         3.1          1.5     0.2   setosa  
-    5          5.0         3.6          1.4     0.2   setosa  
-    6          5.4         3.9          1.7     0.4   setosa  
+
+    Sepal.Length Sepal.Width Petal.Length Petal.Width     Species  
+        1          5.1         3.5          1.4     0.2   setosa  
+        2          4.9         3.0          1.4     0.2   setosa  
+        3          4.7         3.2          1.3     0.2   setosa  
+        4          4.6         3.1          1.5     0.2   setosa  
+        5          5.0         3.6          1.4     0.2   setosa  
+        6          5.4         3.9          1.7     0.4   setosa  
     
     
-library(ggplot2)  
-use iris data in R   
-use variable Sepal.Length, Petal.Length  
-plot  
-ggplot(iris, aes(Sepal.Length, Petal.Length)) + geom_point()  
-ggplot(iris, aes(Sepal.Length, Petal.Length, colour = Species)) + geom_point()  
+library(ggplot2)
+
+#use iris data in R   
+#use variable Sepal.Length, Petal.Length  
+  
+    ggplot(iris, aes(Sepal.Length, Petal.Length)) + geom_point()  
+    ggplot(iris, aes(Sepal.Length, Petal.Length, colour = Species)) + geom_point()  
 
 
 
 ----------
+
 str(Orange)  
-Classes 'nfnGroupedData', 'nfGroupedData', 'groupedData' and 'data.frame': 35 obs. of 3 variables:  
-$ Tree : Ord.factor w/ 5 levels "3"<"1"<"5"<"2"<..: 2 2 2 2 2 2 2 4 4 4 ...  
-$ age : num 118 484 664 1004 1231 ...  
-$ circumference: num 30 58 87 115 120 142 145 33 69 111 ...  
-- attr(*, "formula")=Class 'formula' language circumference ~ age | Tree  
-.. ..- attr(*, ".Environment")=<environment: R_EmptyEnv>  
-- attr(*, "labels")=List of 2  
-..$ x: chr "Time since December 31, 1968"         
-..$ y: chr "Trunk circumference"        
-- attr(*, "units")=List of 2  
-..$ x: chr "(days)" 
-..$ y: chr "(mm)"   
 
-head(Orange)        
-Tree age circumference
-1 1   118           30
-2 1   484           58
-3 1   664           87
-4 1   1004         115
-5 1   1231         120
-6 1   1372         142
+    Classes 'nfnGroupedData', 'nfGroupedData', 'groupedData' and 'data.frame': 35 obs. of 3 variables:  
+    $ Tree : Ord.factor w/ 5 levels "3"<"1"<"5"<"2"<..: 2 2 2 2 2 2 2 4 4 4 ...  
+    $ age : num 118 484 664 1004 1231 ...  
+    $ circumference: num 30 58 87 115 120 142 145 33 69 111 ...  
+    - attr(*, "formula")=Class 'formula' language circumference ~ age | Tree  
+    .. ..- attr(*, ".Environment")=<environment: R_EmptyEnv>  
+    - attr(*, "labels")=List of 2  
+    ..$ x: chr "Time since December 31, 1968"         
+    ..$ y: chr "Trunk circumference"        
+    - attr(*, "units")=List of 2  
+    ..$ x: chr "(days)" 
+    ..$ y: chr "(mm)"   
 
-ggplot(Orange, aes(age, circumference, color=Tree) + geom_line() + facet_grid(.~Tree)  
-+scale_x_continuous(breaks=c(800,1600)) + theme_bw()  
+head(Orange)  
+
+    Tree age circumference
+    1 1   118           30
+    2 1   484           58
+    3 1   664           87
+    4 1   1004         115
+    5 1   1231         120
+    6 1   1372         142
+
+
+    ggplot(Orange, aes(age, circumference, color=Tree) + geom_line() + facet_grid(.~Tree)  
+    +scale_x_continuous(breaks=c(800,1600)) + theme_bw()  
 
 
 
 ------------
-library(s20x)
-data(course.df)
-p <- ggplot(course.df)
-p <- p + geom_point(aes(x=Test, y=Exam))
-print(p)
 
-ggplot(course.df) + geom_point(aes(x = Test, y = Exam, shape = Gender),size =2)
+library(s20x)
+
+    data(course.df)
+    p <- ggplot(course.df)
+    p <- p + geom_point(aes(x=Test, y=Exam))
+    print(p)
+
+    ggplot(course.df) + geom_point(aes(x = Test, y = Exam, shape = Gender),size =2)
 
 --> shows difference between 'setting' an aes and 'mapping' an aes
     Gender variable was mapped to the shape aes, 
     but the size aes was set to the constant value 2, which doubled the size of everything (text, plotting symbols)
 
-#Distribution : geom_hist(), geom_density(), geom_boxplot()
-ggplot(course.df) + geom_histogram(aes(Exam),binwidth = 5)
+__Distribution : geom_hist(), geom_density(), geom_boxplot()__
+    
+    ggplot(course.df) + geom_histogram(aes(Exam),binwidth = 5)
 
 --------
-Exercise
-adjust : make less smooth density (1:normal, 1/2, 1/6.. )
-ggplot(mtcars) + geom_density(aes(mpg),adjust=1/2, fill="pink")
+__Exercise__
 
-create a boxplot of the variable mpg using ggplot2
-create a variable in mtcars dataset which has a single value for all observations
-mtcars$all <- "all" 
-coord_flip : make boxplot horizontal
-ggplot(mtcars) + geom_boxplot(aes(all,mpg),coord_flip())
+#adjust : make less smooth density (1:normal, 1/2, 1/6.. )
 
-$f(x) = {n \choose x} pˆx (1-p)ˆ{n-x}$
+    ggplot(mtcars) + geom_density(aes(mpg),adjust=1/2, fill="pink")
+
+#create a boxplot of the variable mpg using ggplot2
+#create a variable in mtcars dataset which has a single value for all observations
+
+    mtcars$all <- "all" 
+
+#coord_flip : make boxplot horizontal
+
+    ggplot(mtcars) + geom_boxplot(aes(all,mpg),coord_flip())
+
+
 
