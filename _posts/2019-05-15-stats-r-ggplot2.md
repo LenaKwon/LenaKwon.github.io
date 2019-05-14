@@ -16,23 +16,24 @@ featured: true                 #post가 중요한 글인지 여부
 ggplot2
 
 ### what is ggplot?
-ggplot is an R package for data visulaization. 
-It utilizes a scheme for construction of plots called the Grammar of Graphics due to Leland Wilinson.
-It provides a systematic approach to construction of graphs
-It can be used instead of traditional or base graphics in R but provides additional funtionality.
-It use the grid graphics engine and can create plots conditional on one or more variables in the same manner as lattice.
+1. ggplot is an R package for data visulaization. 
+2. It utilizes a scheme for construction of plots called the Grammar of Graphics due to Leland Wilinson.
+3. It provides a systematic approach to construction of graphs
+4. It can be used instead of traditional or base graphics in R but provides additional funtionality.
+5. It use the grid graphics engine and can create plots conditional on one or more variables in the same manner as lattice.
 
 
 ### Resourse
-Hadley Wickham, ggplot2: Elegant Graphics for Data Analysis, Springer, 2009
-Paul Murrell, R Graphic, Second Edition, CRC Press, 2011
-R Cookbook, Graphs by Winston Chang: http://www.cookbook-r.com/Graphs/
+>Hadley Wickham, ggplot2: Elegant Graphics for Data Analysis, Springer, 2009
+>Paul Murrell, R Graphic, Second Edition, CRC Press, 2011
+>R Cookbook, Graphs by Winston Chang: http://www.cookbook-r.com/Graphs/
 
 ### BASICS
-__ggplot()__  :define the data using basic funtion to plot, create empty plot object.
-__geoms___    :represent data and add plot type after it, e.g) geom_point(), geom_line()  
+__ggplot()__  :define the data using basic funtion to plot, create `empty plot object`.
+__geoms___    :represent data and add `plot type` after it, e.g) geom_point(), geom_line()  
               
-               *list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
+               list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
+               
                color,
                size : size of the shape for points,
                      height for text,
@@ -42,7 +43,7 @@ __geoms___    :represent data and add plot type after it, e.g) geom_point(), geo
             
 __aes()__     :aesthetics of the data values (x-, y- location of data)
            
-           *aes() function can be included as an argument to ggplot()
+           aes() function can be included as an argument to ggplot()
            inclusion of aes() in ggplot() is useful when there are multiple geoms
            e.g.
            ggplot(Orange) + geom_line(aes(age, circumference, colour = Tree)) +
@@ -54,18 +55,19 @@ __aes()__     :aesthetics of the data values (x-, y- location of data)
 __scales__    :to change axix components
            *discrete, continuous,date, date time, log, reverse scales
            
-           *continuous(arguments:limits,labels,breaks,na.value)
+           continuous(arguments:limits,labels,breaks,na.value)
            breakes affect the background grid lines, since these lines are linked to tick marks.
            e.g.  +scale_y_continous(name = "Number of Students")
       
-           legend : automatically created and determinded by the scale
-                    name: control legend title
-                    labels: control legend item labels
-                    legend.position
-                    legend.justification
+           legend : -automatically created and determinded by the scale
+                    -name: control legend title
+                    -labels: control legend item labels
+                    -legend.position
+                    -legend.justification
+                    
 __stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
             
-            *one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
+            one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
             stat_bin produces three new variables count, density and x(the centre of the bins)
             Note that the ordinart histogram command also produces these values but invisibly.
             These new values can be used, but may need to be surrounded with .. to ensure the correct variable is chosen.
@@ -81,7 +83,8 @@ __group__     :
             *ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
             stat_smooth(aes(group = Gender, color = Gender), method ="lm")
             
-            
+
+### using dataset
 ----------
 #Fisher's Iris Data  
 str(iris)  
@@ -167,5 +170,5 @@ mtcars$all <- "all"
 coord_flip : make boxplot horizontal
 ggplot(mtcars) + geom_boxplot(aes(all,mpg),coord_flip())
 
-
+$f(x) = {n \choose x} pˆx (1-p)ˆ{n-x}$
 
