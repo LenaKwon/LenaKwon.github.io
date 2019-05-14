@@ -33,8 +33,7 @@ ggplot2
 1. __ggplot()__  :define the data using basic funtion to plot, `create empty plot object`.  
 2. __geoms___    :`represent data` and add `plot type` after it, e.g) geom_point(), geom_line()  
               
-   > * list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
-               
+   > * list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms           
    > * color,  
    > * size : size of the shape for points,  
               height for text,  
@@ -55,24 +54,23 @@ ggplot2
 
 __scales__    :to change axix components
            
-   * discrete, continuous,date, date time, log, reverse scales
-           
-       * continuous(arguments:limits,labels,breaks,na.value)
-                      breakes affect the background grid lines, since these lines are linked to tick marks.
-                      e.g.  +scale_y_continous(name = "Number of Students")
       
-           * legend : - automatically created and determinded by the scale
-                      - name: control legend title
-                      - labels: control legend item labels
-                      - legend.position
-                      - legend.justification
+   > * discrete, continuous,date, date time, log, reverse scales         
+   > * continuous(arguments:limits,labels,breaks,na.value)
+                  breakes affect the background grid lines, since these lines are linked to tick marks.
+                  e.g.  +scale_y_continous(name = "Number of Students")    
+   > * legend : + automatically created and determinded by the scale
+                + name: control legend title
+                + labels: control legend item labels
+                + legend.position
+                + legend.justification
                     
 __stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
             
-   * one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
-           * stat_bin produces three new variables `count`, `density` and `x`(the centre of the bins)
+   > * one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
+   > * stat_bin produces three new variables `count`, `density` and `x`(the centre of the bins)
             
-       * Note that the ordinary histogram command also produces these values but invisibly.
+   >  * Note that the ordinary histogram command also produces these values but invisibly.
             These new values can be used, but may need to be `surrounded with ..` to ensure the correct variable is chosen.
             e.g.
             ggplot(course.df) + 
@@ -83,7 +81,7 @@ __stats__     : a stat takes a dataset and produces a new dataset so can add new
 
 __group__     : 
             
-   * ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
+   > * ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
             stat_smooth(aes(group = Gender, color = Gender), method ="lm")
             
 
