@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "개인 블로그1 : 시작 계기" #post의 제목
+title: "stats R ggplot" #post의 제목
 description:         
 headline: 
-modified: 2019-01-23           #post의 날짜
+modified: 2019-05-15           #post의 날짜
 category: webdevelopment       #post의 카테고리
 tags: [jekyll]                 #post의 태그
 imagefeature: cover10.jpg      #post의 앞에 나오는 사진
