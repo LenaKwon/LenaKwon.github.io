@@ -1,0 +1,25 @@
+---
+layout: post
+title: ggplot
+---
+
+ggplot2
+ggplot2는 앞서 말씀드린 ‘Grammar of Graphics’ 을 적용하여 다음과 같은 다섯가지 사항으로 그림을 그립니다.
+
+Data
+그래프를 그리려는 데이터로 구조는 데이터 프레임이고 데이터의 기록 방식은 long-farmat에 기반한 tidy data여야 합니다.
+
+(Aesthetic)Mapping
+데이터의 요소와 그래프의 요소를 대응시키는 과정으로 그리려고 하는 그래프가 필수적으로 요구하는 대응요소만 만족시키면 됩니다. 하나의 변수가 여러 가지 시각적 요소에 대응될 수도 있습니다.
+
+Geometric Object
+어떤 형태의 그래프를 그릴지 지정해야 합니다. ggplot2에서는 이것을 Geometric Object, 줄여서 geom이라고 합니다.
+
+Position
+그래프의 형태를 지정했으면 그래프에서 각 도형이 어떤 식으로 배치될 지를 결정할 수 있습니다. 이 옵션이 바로 position입니다. 막대그래프나 선 그래프라면 누적 그래프를 그리거나 할 때 position 옵션을 조정해서 형태를 바꿀 수 있습니다.
+
+Statistical Transformation
+마지막으로 값이 어떻게 그래프에 반영되는지 결정하는 옵션이 있습니다. Statistical Transformation, 줄여서 stat 옵션입니다. 히스토그램과 같이 구간내에 존재하는 값의 개수를 세거나 밀도를 계산하는 등, 주어진 값을 변형시켜서 그래프에 반영시킬 때 사용합니다.
+
+$$ x % e $$
+`r`
