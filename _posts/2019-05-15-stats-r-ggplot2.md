@@ -52,7 +52,7 @@ ggplot2
       >      ggplot(Orange, aes(age, circumference, colour=Tree)) + geom_line() + geom_point()         
       > * when an aes is added to a geom, that overrides the aes defined in the ggplot() 
 
-__scales__    :to change axix components
+4. __scales__    :to change axix components
            
       
    > * discrete, continuous,date, date time, log, reverse scales         
@@ -65,7 +65,7 @@ __scales__    :to change axix components
                 + legend.position
                 + legend.justification
                     
-__stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
+5. __stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
             
    > * one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
    > * stat_bin produces three new variables `count`, `density` and `x`(the centre of the bins)
@@ -79,7 +79,7 @@ __stats__     : a stat takes a dataset and produces a new dataset so can add new
             ggplot(course.df) +
             stat_smooth(aes(x = Test, y = Exam), method = "loess")
 
-__group__     : 
+6. __group__     : 
             
    > * ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
             stat_smooth(aes(group = Gender, color = Gender), method ="lm")
