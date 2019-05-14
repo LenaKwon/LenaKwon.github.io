@@ -13,9 +13,9 @@ comments: true                 #post의 댓글 사용 여부
 share: true                    #post의 댓글 공유가능 여부
 featured: true                 #post가 중요한 글인지 여부
 ---
-ggplot2-01
+ggplot2
 
-__what is ggplot?__
+### what is ggplot?
 ggplot is an R package for data visulaization. 
 It utilizes a scheme for construction of plots called the Grammar of Graphics due to Leland Wilinson.
 It provides a systematic approach to construction of graphs
@@ -30,16 +30,18 @@ R Cookbook, Graphs by Winston Chang: http://www.cookbook-r.com/Graphs/
 
 ### BASICS
 __ggplot()__  :define the data using basic funtion to plot, create empty plot object.
-__geoms___    :represent data and add plot type after it, e.g) geom_point(), geom_line()
-           *list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
-           color,
-           size : size of the shape for points,
-                  height for text,
-                  width for lines (units of millimetres)
-            group aesthetics
+__geoms___    :represent data and add plot type after it, e.g) geom_point(), geom_line()  
+              
+               *list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
+               color,
+               size : size of the shape for points,
+                     height for text,
+                     width for lines (units of millimetres)
+               group aesthetics
             
             
 __aes()__     :aesthetics of the data values (x-, y- location of data)
+           
            *aes() function can be included as an argument to ggplot()
            inclusion of aes() in ggplot() is useful when there are multiple geoms
            e.g.
@@ -62,6 +64,7 @@ __scales__    :to change axix components
                     legend.position
                     legend.justification
 __stats__     : a stat takes a dataset and produces a new dataset so can add new variables to an existing dataset.
+            
             *one example of this is the stat_bin which bin data, as is necessary for construction of a histogram
             stat_bin produces three new variables count, density and x(the centre of the bins)
             Note that the ordinart histogram command also produces these values but invisibly.
@@ -74,6 +77,7 @@ __stats__     : a stat takes a dataset and produces a new dataset so can add new
             stat_smooth(aes(x = Test, y = Exam), method = "loess")
 
 __group__     : 
+            
             *ggplot(course.df, aes( x = Test, y = Exam)) + geom_point() + 
             stat_smooth(aes(group = Gender, color = Gender), method ="lm")
             
