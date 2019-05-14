@@ -35,12 +35,12 @@ __geoms___    :`represent data` and add `plot type` after it, e.g) geom_point(),
               
    >list of geom : http://ggplot2.tidyverse.org/reference/#section-layer-geoms
                
-   >*color,
-   >*size : size of the shape for points,
-          height for text,
-          width for lines (units of millimetres)
-   >*group aesthetics
-            
+   >*color,  
+   >*size : size of the shape for points,  
+          height for text,  
+          width for lines (units of millimetres)  
+   >*group aesthetics  
+             
             
 __aes()__     :aesthetics of the data values (x-, y- location of data)
            
